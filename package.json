@@ -25,7 +25,6 @@
     "update-notifier": "^2.1.0"
   },
   "devDependencies": {
-    "babel-preset-babili": "0.0.12",
     "chai": "^3.5.0",
     "chromedriver": "^2.26.1",
     "clear-require": "^2.0.0",
@@ -52,7 +51,7 @@
     "promisify-node": "^0.4.0",
     "proxyquire": "^1.7.10",
     "rollup": "^0.41.6",
-    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-butternut": "^0.1.0",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",

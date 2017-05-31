@@ -15,7 +15,7 @@
 
 /* eslint-disable no-console, valid-jsdoc */
 
-const babel = require('rollup-plugin-babel');
+const butternut = require('rollup-plugin-butternut');
 const childProcess = require('child_process');
 const commonjs = require('rollup-plugin-commonjs');
 const fs = require('fs');
@@ -155,12 +155,6 @@ function generateBuildConfigs({formatToPath, baseDir, moduleName,
     'error-stack-parser': './error-stack-parser-no-op',
   });
 
-  const babelPlugin = babel({
-    presets: [['babili', {
-      comments: false,
-    }]],
-  });
-
   for (let format of Object.keys(formatToPath)) {
     buildConfigs.push({
       rollupConfig: {
@@ -181,7 +175,7 @@ function generateBuildConfigs({formatToPath, baseDir, moduleName,
       buildConfigs.push({
         rollupConfig: {
           entry: entry || path.join(baseDir, 'src', 'index.js'),
-          plugins: [prodReplacePlugin, ...basePlugins, babelPlugin],
+          plugins: [prodReplacePlugin, ...basePlugins, butternut()],
         },
         writeConfig: {
           banner: LICENSE_HEADER,
