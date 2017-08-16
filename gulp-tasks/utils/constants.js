@@ -7,5 +7,5 @@ module.exports = {
   TEST_BUNDLES_BUILD_DIRNAME: 'bundle-builds',
 
   // This is the environments that we should use for NODE_ENV.
-  BUILD_TYPES: [undefined, 'production'],
+  BUILD_TYPES: [undefined, 'prod'],
 };
